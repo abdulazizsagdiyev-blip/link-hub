@@ -721,20 +721,62 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    /* Responsive Breakdown */
+    /* Responsive Mobile Perfection */
     @media (max-width: 1024px) {
       .features-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-grid, .trust-grid { grid-template-columns: 1fr; gap: 40px; }
       .cta-banner { flex-direction: column; text-align: center; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 640px) {
-      .features-grid, .bento-grid { grid-template-columns: 1fr; }
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .header-nav { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-inner { height: 66px; }
+      .brand-logo span { font-size: 0.95rem; }
+      .logo-icon-box { width: 32px; height: 32px; font-size: 0.95rem; }
+      .nav-right-controls { gap: 6px; }
+      .weather-widget { padding: 4px 8px; font-size: 0.75rem; }
+      #weather-city { display: none; }
+      .circular-clock-widget { padding: 4px 8px; font-size: 0.75rem; }
+      .analog-clock-svg { width: 18px; height: 18px; }
+      .lang-btn { padding: 3px 8px; font-size: 0.72rem; }
+
+      .hero-section { padding: 100px 0 50px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+      .hero-pill { margin: 0 auto 16px; font-size: 0.76rem; padding: 5px 12px; }
+      .hero-title { font-size: clamp(1.9rem, 7vw, 2.5rem); margin-bottom: 14px; }
+      .hero-desc { margin: 0 auto 20px; font-size: 0.92rem; }
+
+      .hero-left { display: flex; flex-direction: column; align-items: center; }
+      .hero-visual-wrap { margin: 8px 0 20px; }
+      .hero-portrait-frame { width: 270px; height: 330px; border-radius: var(--radius-md); }
+      .hero-glow { width: 240px; height: 240px; }
+
+      .hero-btns { flex-direction: column; width: 100%; gap: 10px; margin-bottom: 24px; }
+      .btn { width: 100%; padding: 14px 20px; font-size: 0.9rem; }
+
+      .hero-checks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 14px;
+        width: 100%;
+        padding-top: 16px;
+        text-align: left;
+      }
+      .check-item { font-size: 0.8rem; }
+
+      .features-grid, .bento-grid { grid-template-columns: 1fr; gap: 14px; }
       .bento-card.featured { grid-column: span 1; }
       .nav-links { display: none; }
-      .hero-btns { flex-direction: column; width: 100%; }
-      .btn { width: 100%; }
-      .footer-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .stat-item { padding: 14px; }
+      .stat-num { font-size: 1.5rem; }
+      .testimonial-card { padding: 24px; }
+      .cta-banner { padding: 28px 20px; }
+    }
+    @media (max-width: 380px) {
+      .brand-logo span { display: none; }
+      .hero-checks { grid-template-columns: 1fr; }
     }
   </style>
 </head>
