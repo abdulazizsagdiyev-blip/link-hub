@@ -159,24 +159,34 @@
       font-weight: 700;
     }
 
-    /* Circular Clock Widget */
+    /* Circular Clock Widget with 60FPS Smooth Sweeping Motion */
     .circular-clock-widget {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border-subtle);
-      padding: 5px 12px;
+      background: rgba(37, 99, 235, 0.12);
+      border: 1px solid var(--border-active);
+      padding: 5px 14px;
       border-radius: var(--radius-full);
-      font-size: 0.84rem;
+      font-size: 0.86rem;
       font-weight: 700;
       color: var(--text-white);
       font-family: var(--font-heading);
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
     }
     .analog-clock-svg {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       flex-shrink: 0;
+      overflow: visible;
+    }
+    .clock-colon-pulse {
+      animation: colonPulse 1s infinite alternate;
+      color: var(--accent-blue-light);
+    }
+    @keyframes colonPulse {
+      0%   { opacity: 0.2; }
+      100% { opacity: 1; }
     }
 
     /* Language Switcher */
@@ -1251,17 +1261,22 @@
         .catch(() => toast('Nusxalashda xatolik', '⚠️'));
     }
 
-    /* ─── REAL-TIME CIRCULAR CLOCK LOGIC ──────────── */
-    function updateClock() {
+    /* ─── REAL-TIME CONTINUOUS SMOOTH CLOCK (60FPS SWEEPING MOTION) ─── */
+    function animateClock() {
       const now = new Date();
       const hours = now.getHours();
       const minutes = now.getMinutes();
       const seconds = now.getSeconds();
+      const millis = now.getMilliseconds();
 
-      const hDeg = (hours % 12 + minutes / 60) * 30;
-      const mDeg = (minutes + seconds / 60) * 6;
-      const sDeg = seconds * 6;
-      const sOffset = 276 - (seconds / 60) * 276;
+      const exactSec = seconds + millis / 1000;
+      const exactMin = minutes + exactSec / 60;
+      const exactHour = (hours % 12) + exactMin / 60;
+
+      const sDeg = exactSec * 6;
+      const mDeg = exactMin * 6;
+      const hDeg = exactHour * 30;
+      const sOffset = 276 - (exactSec / 60) * 276;
 
       const hHand = document.getElementById('clock-hour-hand');
       const mHand = document.getElementById('clock-min-hand');
@@ -1273,15 +1288,17 @@
       if (mHand) mHand.setAttribute('transform', `rotate(${mDeg} 50 50)`);
       if (sHand) sHand.setAttribute('transform', `rotate(${sDeg} 50 50)`);
       if (sRing) sRing.style.strokeDashoffset = sOffset;
+
       if (cTime) {
         const hh = String(hours).padStart(2, '0');
         const mm = String(minutes).padStart(2, '0');
         const ss = String(seconds).padStart(2, '0');
-        cTime.textContent = `${hh}:${mm}:${ss}`;
+        cTime.innerHTML = `${hh}<span class="clock-colon-pulse">:</span>${mm}<span class="clock-colon-pulse">:</span>${ss}`;
       }
+
+      requestAnimationFrame(animateClock);
     }
-    setInterval(updateClock, 1000);
-    updateClock();
+    requestAnimationFrame(animateClock);
 
     /* ─── REAL-TIME WEATHER WIDGET (OPEN-METEO API) ─── */
     async function fetchTashkentWeather() {
