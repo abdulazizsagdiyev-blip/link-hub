@@ -5,1429 +5,1309 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title id="page-title">Abdulaziz Sagdiyev</title>
-  <meta name="description" id="page-description" content="Videograf · Marketing · AI Mutaxassisi" />
+  <title id="page-title">Abdulaziz Sagdiyev — Videograf, Fotograf & SMM</title>
+  <meta name="description" id="page-description" content="Videograf, Fotograf, Marketing va AI mutaxassisi. Barcha havolalar va aloqa ma'lumotlari." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#7C3AED" />
+  <meta name="theme-color" content="#050810" />
 
   <meta property="og:type" content="profile" />
-  <meta property="og:title" id="og-title" content="Abdulaziz Sagdiyev" />
-  <meta property="og:description" id="og-description" content="Videograf · Marketing · AI Mutaxassisi" />
-  <meta property="og:image" id="og-image" content="og-image.webp" />
-  <meta property="og:url" id="og-url" content="" />
+  <meta property="og:title" id="og-title" content="Abdulaziz Sagdiyev — Portfolio" />
+  <meta property="og:description" id="og-description" content="Videograf, Fotograf, Marketing va AI mutaxassisi." />
+  <meta property="og:image" content="og-image.webp" />
+  <meta property="og:url" content="https://sagdiyevabdulaziz.uz" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" id="tw-title" content="Abdulaziz Sagdiyev" />
-  <meta name="twitter:description" id="tw-description" content="Videograf · Marketing · AI Mutaxassisi" />
-  <meta name="twitter:image" id="tw-image" content="og-image.webp" />
-  <link rel="canonical" id="canonical" href="" />
+  <meta name="twitter:title" content="Abdulaziz Sagdiyev" />
+  <meta name="twitter:description" content="Videograf, Fotograf, Marketing va AI mutaxassisi." />
+  <meta name="twitter:image" content="og-image.webp" />
+  <link rel="canonical" id="canonical" href="https://sagdiyevabdulaziz.uz" />
 
-  <!-- Premium Fonts -->
+  <!-- Premium Typography (Inter & Manrope) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
 
   <style>
     /* ═══════════════════════════════════════════
-       DESIGN TOKENS
+       DARK TECH SAAS DESIGN TOKENS
     ═══════════════════════════════════════════ */
     :root {
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-body:    'Inter', sans-serif;
+      --font-heading: 'Manrope', -apple-system, sans-serif;
+      --font-body:    'Inter', -apple-system, sans-serif;
 
-      /* Premium Dark Palette */
-      --bg:           #060609;
-      --bg-2:         #0D0D14;
-      --surface:      rgba(255,255,255,0.04);
-      --surface-2:    rgba(255,255,255,0.07);
-      --surface-3:    rgba(255,255,255,0.11);
-      --border:       rgba(255,255,255,0.07);
-      --border-2:     rgba(255,255,255,0.14);
-      --border-glow:  rgba(124,58,237,0.5);
+      /* Strict Color Palette */
+      --bg-main:       #050810;
+      --bg-card:       #0F1420;
+      --bg-card-hover: #151C2C;
+      --bg-banner:     #0D121F;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-active: rgba(59, 130, 246, 0.4);
 
-      /* Brand Gradient */
-      --g-purple:  #7C3AED;
-      --g-violet:  #6D28D9;
-      --g-pink:    #EC4899;
-      --g-cyan:    #06B6D4;
-      --g-blue:    #3B82F6;
-      --g-amber:   #F59E0B;
+      /* Electric Blue Accent Gradient */
+      --accent-blue:       #2563EB;
+      --accent-blue-light: #3B82F6;
+      --gradient-blue:     linear-gradient(135deg, #2563EB, #3B82F6);
+      --gradient-glow:     0 0 25px rgba(37, 99, 235, 0.4);
 
-      --text-1: #F8FAFC;
-      --text-2: rgba(248,250,252,0.65);
-      --text-3: rgba(248,250,252,0.38);
+      /* Text Colors */
+      --text-white: #FFFFFF;
+      --text-gray:  #9CA3AF;
+      --text-muted: #6B7280;
 
-      --radius-sm:   10px;
-      --radius-md:   18px;
-      --radius-lg:   26px;
-      --radius-xl:   36px;
+      /* Layout */
+      --container: 1200px;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
       --radius-full: 9999px;
 
-      --ease-spring: cubic-bezier(0.34,1.56,0.64,1);
-      --ease-out:    cubic-bezier(0.16,1,0.3,1);
-      --ease-in-out: cubic-bezier(0.4,0,0.2,1);
-
-      --container: 500px;
-      --px: 16px;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    [data-theme="light"] {
-      --bg:        #F4F4FF;
-      --bg-2:      #EBEBFF;
-      --surface:   rgba(255,255,255,0.8);
-      --surface-2: rgba(255,255,255,0.95);
-      --surface-3: rgba(255,255,255,1);
-      --border:    rgba(0,0,0,0.07);
-      --border-2:  rgba(124,58,237,0.25);
-      --text-1:    #0F0F1A;
-      --text-2:    rgba(15,15,26,0.65);
-      --text-3:    rgba(15,15,26,0.4);
-    }
-
-    /* ═══════════════════════════════════════════
-       RESET
-    ═══════════════════════════════════════════ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
       font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text-1);
-      min-height: 100dvh;
+      background-color: var(--bg-main);
+      color: var(--text-white);
+      line-height: 1.6;
       overflow-x: hidden;
-      transition: background 0.4s var(--ease-in-out), color 0.4s var(--ease-in-out);
-    }
-    a { text-decoration: none; color: inherit; }
-    button { cursor: pointer; font-family: inherit; border: none; background: none; }
-    img { display: block; max-width: 100%; }
-    ::selection { background: rgba(124,58,237,0.3); }
-
-    /* ═══════════════════════════════════════════
-       AURORA BACKGROUND
-    ═══════════════════════════════════════════ */
-    .aurora {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .aurora-blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(100px);
-      will-change: transform;
-    }
-    .a1 {
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(124,58,237,0.35) 0%, transparent 70%);
-      top: -200px; right: -150px;
-      animation: blob1 15s ease-in-out infinite;
-    }
-    .a2 {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(6,182,212,0.25) 0%, transparent 70%);
-      bottom: 5%; left: -100px;
-      animation: blob2 18s ease-in-out infinite;
-    }
-    .a3 {
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(236,72,153,0.2) 0%, transparent 70%);
-      top: 40%; right: 5%;
-      animation: blob3 12s ease-in-out infinite;
-    }
-    .a4 {
-      width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%);
-      top: 70%; left: 30%;
-      animation: blob1 20s ease-in-out infinite reverse;
-    }
-    @keyframes blob1 {
-      0%,100% { transform: translate(0,0) scale(1); }
-      33%      { transform: translate(40px,-30px) scale(1.08); }
-      66%      { transform: translate(-25px,20px) scale(0.94); }
-    }
-    @keyframes blob2 {
-      0%,100% { transform: translate(0,0) scale(1); }
-      50%      { transform: translate(50px,-40px) scale(1.1); }
-    }
-    @keyframes blob3 {
-      0%,100% { transform: translate(0,0) scale(1) rotate(0deg); }
-      50%      { transform: translate(-30px,25px) scale(1.05) rotate(10deg); }
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Particles */
-    .particles {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: white;
-      opacity: 0;
-      animation: particleFloat linear infinite;
-    }
-    @keyframes particleFloat {
-      0%   { opacity: 0; transform: translateY(0) scale(0); }
-      10%  { opacity: 0.6; }
-      90%  { opacity: 0.3; }
-      100% { opacity: 0; transform: translateY(-100vh) scale(1); }
-    }
-
-    [data-theme="light"] .aurora-blob { opacity: 0.4; }
-    [data-theme="light"] .particle { background: var(--g-purple); }
-
-    /* ═══════════════════════════════════════════
-       LAYOUT
-    ═══════════════════════════════════════════ */
-    .page {
-      position: relative;
-      z-index: 2;
-      min-height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .wrap {
+    .container {
       width: 100%;
       max-width: var(--container);
-      padding: 0 var(--px);
-      padding-bottom: calc(env(safe-area-inset-bottom,0px) + 60px);
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
     /* ═══════════════════════════════════════════
-       TOP BAR
+       NAVIGATION BAR & LIVE WEATHER & LANG TOGGLE
     ═══════════════════════════════════════════ */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      width: 100%;
-      max-width: var(--container);
-      display: flex;
-      justify-content: flex-end;
-      padding: 14px var(--px);
-    }
-    .theme-btn {
-      width: 40px; height: 40px;
-      border-radius: var(--radius-full);
-      background: var(--surface);
-      border: 1px solid var(--border);
+    .header-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 500;
+      background: rgba(5, 8, 16, 0.84);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-inner {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 17px;
-      transition: all 0.2s var(--ease-spring);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      justify-content: space-between;
+      height: 76px;
     }
-    .theme-btn:hover { transform: scale(1.1) rotate(15deg); background: var(--surface-2); }
-    .theme-btn:active { transform: scale(0.92); }
-
-    /* ═══════════════════════════════════════════
-       HEADER
-    ═══════════════════════════════════════════ */
-    .header {
-      padding: 4px 0 32px;
+    .brand-logo {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 20px;
-      animation: fadeUp 0.7s var(--ease-out) both;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-white);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
     }
-
-    /* Avatar */
-    .avatar-wrap {
-      position: relative;
-      width: 104px; height: 104px;
-    }
-    .avatar-ring-outer {
-      position: absolute;
-      inset: -4px;
-      border-radius: 50%;
-      background: conic-gradient(
-        from 0deg,
-        #7C3AED, #EC4899, #06B6D4, #F59E0B, #7C3AED
-      );
-      animation: spin 3s linear infinite;
-      z-index: 0;
-    }
-    .avatar-ring-inner {
-      position: absolute;
-      inset: -1px;
-      border-radius: 50%;
-      background: var(--bg);
-      z-index: 1;
-    }
-    .avatar-img {
-      position: relative;
-      z-index: 2;
-      width: 104px; height: 104px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;
-    }
-    .avatar-fallback {
-      position: relative;
-      z-index: 2;
-      width: 104px; height: 104px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--g-purple), var(--g-pink));
-      display: none;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 38px;
-      font-weight: 700;
-      color: white;
-    }
-    .avatar-badge {
-      position: absolute;
-      bottom: 4px; right: 4px;
-      z-index: 3;
-      width: 24px; height: 24px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #3B82F6, #1D4ED8);
-      border: 2px solid var(--bg);
+    .logo-icon-box {
+      width: 36px; height: 36px;
+      border-radius: var(--radius-sm);
+      background: var(--gradient-blue);
       display: flex; align-items: center; justify-content: center;
-      font-size: 11px;
+      color: #FFF;
+      box-shadow: var(--gradient-glow);
+      font-size: 1.1rem;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* Profile text */
-    .profile-info {
-      text-align: center;
+    .nav-links {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-white); }
+
+    .nav-right-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Weather Widget */
+    .weather-widget {
+      display: flex;
       align-items: center;
       gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      color: var(--text-gray);
     }
-    .profile-name {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
+    .weather-temp {
+      color: var(--text-white);
       font-weight: 700;
-      letter-spacing: -0.04em;
-      line-height: 1.1;
-      background: linear-gradient(135deg, var(--text-1) 30%, var(--g-purple) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .profile-username {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--g-purple);
-      letter-spacing: 0.01em;
-      font-family: var(--font-display);
-    }
-    /* Animated gradient tagline */
-    .profile-tagline {
-      font-family: var(--font-display);
-      font-size: 0.9375rem;
-      font-weight: 600;
-      background: linear-gradient(90deg,
-        var(--g-purple), var(--g-cyan), var(--g-pink), var(--g-purple)
-      );
-      background-size: 300% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: gradientShift 4s ease infinite;
-    }
-    @keyframes gradientShift {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .profile-bio {
-      font-size: 0.875rem;
-      color: var(--text-2);
-      line-height: 1.65;
-      max-width: 300px;
     }
 
-    /* Status pill */
-    .status-pill {
+    /* Circular Clock Widget */
+    .circular-clock-widget {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-white);
+      font-family: var(--font-heading);
+    }
+    .analog-clock-svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      padding: 3px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-gray);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--gradient-blue);
+      color: #FFF;
+      box-shadow: var(--gradient-glow);
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO SECTION
+    ═══════════════════════════════════════════ */
+    .hero-section {
+      padding: 160px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 16px;
+      background: rgba(37, 99, 235, 0.12);
+      border: 1px solid var(--border-active);
+      padding: 6px 16px;
       border-radius: var(--radius-full);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--text-2);
-      position: relative;
-      overflow: hidden;
-    }
-    .status-pill::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(124,58,237,0.1), transparent);
-      transform: translateX(-100%);
-      animation: shimmerPill 3s ease infinite;
-    }
-    @keyframes shimmerPill {
-      100% { transform: translateX(100%); }
-    }
-
-    /* Skill tags */
-    .tags-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      justify-content: center;
-    }
-    .tag {
-      padding: 5px 12px;
-      border-radius: var(--radius-full);
-      font-size: 0.75rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-2);
-      transition: all 0.2s var(--ease-out);
-      letter-spacing: 0.02em;
-    }
-    .tag:hover {
-      border-color: var(--border-glow);
-      color: var(--g-purple);
-      background: rgba(124,58,237,0.08);
-      transform: translateY(-2px);
-    }
-
-    /* ═══════════════════════════════════════════
-       SOCIAL BAR
-    ═══════════════════════════════════════════ */
-    .social-bar {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      padding-bottom: 28px;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.1s var(--ease-out) both;
-    }
-    .social-btn {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      padding: 12px 16px 8px;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: all 0.25s var(--ease-spring);
-      overflow: hidden;
-      min-width: 60px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
-    }
-    .social-btn svg {
-      width: 22px; height: 22px;
-      fill: var(--text-2);
-      transition: fill 0.2s ease;
-      position: relative; z-index: 1;
-    }
-    .social-label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: var(--text-3);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      position: relative; z-index: 1;
-      transition: color 0.2s ease;
-    }
-    .social-btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--s-color, var(--g-purple));
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
-    .social-btn:hover {
-      border-color: transparent;
-      transform: translateY(-5px) scale(1.06);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.3), 0 0 24px var(--s-color, var(--g-purple));
-    }
-    .social-btn:hover::before { opacity: 1; }
-    .social-btn:hover svg { fill: white; }
-    .social-btn:hover .social-label { color: rgba(255,255,255,0.85); }
-    .social-btn:active { transform: translateY(0) scale(0.95); }
-
-    /* ═══════════════════════════════════════════
-       SECTION LABEL
-    ═══════════════════════════════════════════ */
-    .sec-label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    .sec-label-text {
-      font-size: 0.6875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-3);
-      white-space: nowrap;
-    }
-    .sec-label-line {
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, var(--border), transparent);
-    }
-
-    /* ═══════════════════════════════════════════
-       BENTO GRID — PREMIUM CARDS
-    ═══════════════════════════════════════════ */
-    .links-sec {
+      color: var(--accent-blue-light);
       margin-bottom: 20px;
-      animation: fadeUp 0.7s 0.15s var(--ease-out) both;
     }
-    .bento {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .card {
-      position: relative;
-      display: block;
-      border-radius: var(--radius-lg);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      overflow: hidden;
-      transition: all 0.3s var(--ease-out);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      transform-style: preserve-3d;
-    }
-    .card.featured { grid-column: 1 / -1; }
-    .card:hover {
-      border-color: var(--border-2);
-      transform: translateY(-5px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    }
-    .card:active { transform: translateY(0) scale(0.98); }
-
-    /* Gradient overlay */
-    .card-grad {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.35s ease;
-    }
-    .card:hover .card-grad { opacity: 1; }
-
-    /* Shimmer sweep */
-    .card-shimmer {
-      position: absolute;
-      top: 0; left: -100%;
-      width: 60%;
-      height: 100%;
-      background: linear-gradient(
-        105deg,
-        transparent 20%,
-        rgba(255,255,255,0.08) 50%,
-        transparent 80%
-      );
-      transition: left 0.6s ease;
-      pointer-events: none;
-      z-index: 5;
-    }
-    .card:hover .card-shimmer { left: 150%; }
-
-    /* Badge */
-    .card-badge {
-      position: absolute;
-      top: 14px; right: 14px;
-      z-index: 4;
-      padding: 4px 10px;
-      border-radius: var(--radius-full);
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(8px);
-      font-size: 0.6875rem;
-      font-weight: 700;
-      color: white;
-      letter-spacing: 0.03em;
-    }
-
-    /* Card inner */
-    .card-body {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .card.featured .card-body { padding: 24px; gap: 18px; }
-
-    .card-icon {
-      flex-shrink: 0;
-      width: 50px; height: 50px;
-      border-radius: var(--radius-md);
-      background: rgba(255,255,255,0.1);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
-      transition: transform 0.3s var(--ease-spring), background 0.3s ease;
-    }
-    .card.featured .card-icon { width: 58px; height: 58px; font-size: 26px; }
-    .card:hover .card-icon {
-      transform: scale(1.15) rotate(-5deg);
-      background: rgba(255,255,255,0.2);
-    }
-
-    .card-content { flex: 1; min-width: 0; }
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 0.9375rem;
-      font-weight: 700;
-      color: var(--text-1);
-      line-height: 1.3;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      transition: color 0.2s ease;
-    }
-    .card.featured .card-title { font-size: 1.0625rem; white-space: normal; }
-    .card:hover .card-title { color: white; }
-    .card-sub {
-      font-size: 0.8rem;
-      color: var(--text-3);
-      margin-top: 3px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      transition: color 0.2s ease;
-    }
-    .card.featured .card-sub { white-space: normal; }
-    .card:hover .card-sub { color: rgba(255,255,255,0.7); }
-
-    .card-arrow {
-      flex-shrink: 0;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      display: flex; align-items: center; justify-content: center;
-      transition: all 0.3s var(--ease-spring);
-    }
-    .card:hover .card-arrow {
-      background: rgba(255,255,255,0.25);
-      transform: translate(3px,-3px);
-    }
-    .card-arrow svg {
-      width: 14px; height: 14px;
-      stroke: white;
-    }
-
-    /* Card gradient themes */
-    .g-violet  { background: linear-gradient(135deg, #7C3AED, #9C27B0); }
-    .g-red     { background: linear-gradient(135deg, #EF4444, #DC2626); }
-    .g-blue    { background: linear-gradient(135deg, #3B82F6, #06B6D4); }
-    .g-green   { background: linear-gradient(135deg, #10B981, #059669); }
-    .g-amber   { background: linear-gradient(135deg, #F59E0B, #EF4444); }
-
-    /* ═══════════════════════════════════════════
-       STATS ROW
-    ═══════════════════════════════════════════ */
-    .stats-sec {
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.3rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
       margin-bottom: 20px;
-      animation: fadeUp 0.7s 0.2s var(--ease-out) both;
     }
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-    .stat-card {
-      padding: 18px 12px;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      text-align: center;
-      transition: all 0.25s var(--ease-out);
-    }
-    .stat-card:hover {
-      border-color: var(--border-2);
-      transform: translateY(-3px);
-      background: var(--surface-2);
-    }
-    .stat-num {
-      font-family: var(--font-display);
-      font-size: 1.375rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--text-1), var(--g-purple));
+    .text-accent {
+      background: var(--gradient-blue);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      letter-spacing: -0.03em;
     }
-    .stat-label {
-      font-size: 0.7rem;
-      color: var(--text-3);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-top: 3px;
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-gray);
+      max-width: 540px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+    .hero-btns {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s var(--ease-out);
+    }
+    .btn-primary {
+      background: var(--gradient-blue);
+      color: #FFF;
+      border: none;
+      box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px -4px rgba(37, 99, 235, 0.7);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-white);
+    }
+    .btn-secondary:hover {
+      border-color: var(--border-active);
+      background: rgba(255, 255, 255, 0.04);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Checkmarks Row */
+    .hero-checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+    .check-icon {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.2);
+      color: var(--accent-blue-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Hero Right Visual & Floating Cards */
+    .hero-visual-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-glow {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.55), transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+    }
+    .hero-portrait-frame {
+      position: relative;
+      z-index: 1;
+      width: 340px;
+      height: 420px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-active);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      background: var(--bg-card);
+    }
+    .hero-portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Floating Glass Logo Cards */
+    .floating-logo-card {
+      position: absolute;
+      z-index: 2;
+      background: rgba(15, 20, 32, 0.92);
+      border: 1px solid var(--border-subtle);
+      backdrop-filter: blur(16px);
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+      animation: floatAnim 4s infinite ease-in-out alternate;
+    }
+    .card-1 { top: 10%; left: -20px; animation-delay: 0s; }
+    .card-2 { bottom: 15%; right: -20px; animation-delay: 1.5s; }
+    .card-3 { bottom: 5%; left: 10px; animation-delay: 3s; }
+
+    @keyframes floatAnim {
+      from { transform: translateY(0px); }
+      to   { transform: translateY(-10px); }
+    }
+    .float-card-icon {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: var(--gradient-blue);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .float-card-title { font-size: 0.82rem; font-weight: 700; color: var(--text-white); }
+    .float-card-sub { font-size: 0.72rem; color: var(--text-gray); }
+
+    /* ═══════════════════════════════════════════
+       FEATURES SECTION (4 COLUMNS)
+    ═══════════════════════════════════════════ */
+    .section-padding { padding: 90px 0; }
+    .sec-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 60px;
+    }
+    .sec-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .sec-desc { font-size: 1rem; color: var(--text-gray); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      transition: all 0.3s var(--ease-out);
+    }
+    .feature-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-active);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px -10px rgba(37, 99, 235, 0.25);
+    }
+    .feature-icon-box {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      background: var(--gradient-blue);
+      display: flex; align-items: center; justify-content: center;
+      color: #FFF;
+      margin-bottom: 20px;
+      box-shadow: var(--gradient-glow);
+      font-size: 1.25rem;
+    }
+    .feature-title {
+      font-family: var(--font-heading);
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .feature-desc {
+      font-size: 0.88rem;
+      color: var(--text-gray);
+      line-height: 1.55;
     }
 
     /* ═══════════════════════════════════════════
-       CONTACT INFO
+       BENTO LINKS & DEMO SECTION
     ═══════════════════════════════════════════ */
-    .contact-sec {
-      margin-bottom: 20px;
-      animation: fadeUp 0.7s 0.25s var(--ease-out) both;
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
-    .contact-list { display: flex; flex-direction: column; gap: 8px; }
-    .contact-item {
+    .bento-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      text-decoration: none;
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.3s var(--ease-out);
+    }
+    .bento-card.featured {
+      grid-column: span 2;
+    }
+    .bento-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-active);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px -10px rgba(37, 99, 235, 0.3);
+    }
+    .bento-icon-box {
+      width: 46px; height: 46px;
+      border-radius: 14px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid var(--border-active);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .bento-content { flex: 1; min-width: 0; }
+    .bento-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .bento-sub { font-size: 0.82rem; color: var(--text-gray); }
+    .bento-arrow { color: var(--accent-blue-light); }
+
+    /* ═══════════════════════════════════════════
+       BRANDS SECTION
+    ═══════════════════════════════════════════ */
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .brand-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s var(--ease-out);
+    }
+    .brand-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-active);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px -10px rgba(37, 99, 235, 0.3);
+    }
+    .brand-img-wrap {
+      width: 56px;
+      height: 56px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--border-active);
+      flex-shrink: 0;
+      background: #000;
+    }
+    .brand-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .brand-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-white);
+      margin-bottom: 2px;
+    }
+    .brand-sub { font-size: 0.8rem; color: var(--text-gray); }
+
+    /* ═══════════════════════════════════════════
+       TRUST & TESTIMONIAL SECTION
+    ═══════════════════════════════════════════ */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .stats-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 20px;
+      border-radius: var(--radius-md);
+    }
+    .stat-icon {
+      width: 52px; height: 52px;
+      border-radius: 16px;
+      background: var(--gradient-blue);
+      display: flex; align-items: center; justify-content: center;
+      color: #FFF;
+      font-size: 1.25rem;
+      box-shadow: var(--gradient-glow);
+    }
+    .stat-num {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1.1;
+    }
+    .stat-sub { font-size: 0.85rem; color: var(--text-gray); }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-active);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .stars { color: #F59E0B; font-size: 1.2rem; margin-bottom: 16px; }
+    .quote-text {
+      font-size: 1.08rem;
+      color: var(--text-white);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .author-wrap {
       display: flex;
       align-items: center;
       gap: 14px;
-      padding: 14px 16px;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      transition: all 0.25s var(--ease-out);
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
     }
-    .contact-item::after {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: linear-gradient(180deg, var(--g-purple), var(--g-cyan));
-      border-radius: 0 2px 2px 0;
-      opacity: 0;
-      transition: opacity 0.2s ease;
+    .author-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-blue-light);
     }
-    .contact-item:hover {
-      border-color: var(--border-2);
-      background: var(--surface-2);
-      transform: translateX(4px);
-    }
-    .contact-item:hover::after { opacity: 1; }
-    .contact-item:active { transform: translateX(0) scale(0.99); }
-
-    .contact-icon-wrap {
-      width: 38px; height: 38px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--g-purple), var(--g-violet));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(124,58,237,0.35);
-    }
-    .contact-text { flex: 1; min-width: 0; }
-    .contact-label {
-      font-size: 0.6875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: var(--text-3);
-    }
-    .contact-value {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-1);
-      margin-top: 2px;
-    }
-    .contact-copy {
-      font-size: 0.7rem;
-      color: var(--text-3);
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      transition: color 0.2s ease;
-      flex-shrink: 0;
-    }
-    .contact-item:hover .contact-copy { color: var(--g-purple); }
+    .author-name { font-weight: 700; font-size: 0.95rem; }
+    .author-role { font-size: 0.8rem; color: var(--text-gray); }
 
     /* ═══════════════════════════════════════════
-       ACTION BUTTONS
+       CONTACT & PRICING BANNER
     ═══════════════════════════════════════════ */
-    .actions-sec {
-      margin-bottom: 20px;
-      animation: fadeUp 0.7s 0.3s var(--ease-out) both;
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
     }
-    .actions-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
-    .btn {
-      position: relative;
+    .contact-item {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 15px 20px;
+      gap: 16px;
+      padding: 18px 24px;
       border-radius: var(--radius-md);
-      font-size: 0.875rem;
-      font-weight: 600;
-      font-family: var(--font-display);
-      transition: all 0.25s var(--ease-spring);
-      overflow: hidden;
-      letter-spacing: -0.01em;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+      transition: all 0.25s var(--ease-out);
     }
-    .btn svg { width: 17px; height: 17px; flex-shrink: 0; }
+    .contact-item:hover {
+      border-color: var(--border-active);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+    .contact-icon-wrap {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid var(--border-active);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .contact-text { flex: 1; min-width: 0; }
+    .contact-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+    .contact-value { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--text-white); }
+    .contact-copy-btn { font-size: 0.8rem; font-weight: 700; color: var(--accent-blue-light); }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--g-purple) 0%, #9C27B0 50%, var(--g-pink) 100%);
-      background-size: 200% 200%;
-      color: white;
-      border: none;
-      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
-      animation: gradBtnShift 4s ease infinite;
+    .cta-banner {
+      background: var(--bg-banner);
+      border: 1px solid var(--border-active);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      box-shadow: 0 20px 60px -10px rgba(37, 99, 235, 0.35);
     }
-    @keyframes gradBtnShift {
-      0%,100% { background-position: 0% 50%; }
-      50%      { background-position: 100% 50%; }
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 32px rgba(124,58,237,0.55);
-    }
-    .btn-primary:active { transform: translateY(0) scale(0.97); }
-
-    .btn-secondary {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-1);
-      backdrop-filter: blur(12px);
-    }
-    .btn-secondary:hover {
-      background: var(--surface-2);
-      border-color: var(--border-2);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    }
-    .btn-secondary:active { transform: translateY(0) scale(0.97); }
-
-    /* Ripple */
-    .ripple-host { position: relative; overflow: hidden; }
-    .ripple {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.2);
-      transform: scale(0);
-      animation: rippleAnim 0.55s linear;
-      pointer-events: none;
-    }
-    @keyframes rippleAnim { to { transform: scale(4); opacity: 0; } }
 
     /* ═══════════════════════════════════════════
        FOOTER
     ═══════════════════════════════════════════ */
     .footer {
-      padding: 28px 0 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      animation: fadeUp 0.7s 0.35s var(--ease-out) both;
+      padding: 80px 0 40px;
+      border-top: 1px solid var(--border-subtle);
     }
-    .footer-copy {
-      font-size: 0.8rem;
-      color: var(--text-3);
-      font-weight: 500;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 48px;
     }
-    .footer-made {
-      font-size: 0.72rem;
-      color: var(--text-3);
-      opacity: 0.55;
-    }
-    .footer-dot {
-      display: inline-block;
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--g-purple);
-      margin: 0 4px;
-      animation: pulseDot 2s ease infinite;
-    }
-    @keyframes pulseDot {
-      0%,100% { opacity: 0.4; transform: scale(1); }
-      50%      { opacity: 1; transform: scale(1.4); }
-    }
-
-    /* ═══════════════════════════════════════════
-       TOAST
-    ═══════════════════════════════════════════ */
-    .toasts {
-      position: fixed;
-      bottom: 28px; left: 50%;
-      transform: translateX(-50%);
-      z-index: 9999;
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 8px;
-      pointer-events: none;
-      width: calc(100% - 32px);
-      max-width: 340px;
-    }
-    .toast {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-radius: var(--radius-md);
-      background: rgba(13,13,20,0.95);
-      border: 1px solid rgba(124,58,237,0.3);
-      backdrop-filter: blur(24px);
-      color: white;
-      font-size: 0.875rem;
-      font-weight: 500;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-      animation: toastIn 0.4s var(--ease-spring) both;
-    }
-    .toast.out { animation: toastOut 0.3s ease forwards; }
-    @keyframes toastIn {
-      from { opacity: 0; transform: translateY(14px) scale(0.9); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    @keyframes toastOut {
-      to { opacity: 0; transform: translateY(8px) scale(0.94); }
-    }
-
-    /* ═══════════════════════════════════════════
-       SHARE MODAL
-    ═══════════════════════════════════════════ */
-    .modal-bg {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 500;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 0 12px 12px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .modal-bg.open { opacity: 1; pointer-events: auto; }
-    .modal-sheet {
-      width: 100%;
-      max-width: var(--container);
-      background: var(--bg-2);
-      border: 1px solid var(--border-2);
-      border-radius: var(--radius-xl) var(--radius-xl) var(--radius-lg) var(--radius-lg);
-      padding: 6px 22px 28px;
-      transform: translateY(32px);
-      transition: transform 0.38s var(--ease-spring);
-      box-shadow: 0 -12px 48px rgba(0,0,0,0.5);
-    }
-    .modal-bg.open .modal-sheet { transform: translateY(0); }
-    .modal-handle {
-      width: 38px; height: 4px;
-      border-radius: 2px;
-      background: var(--border-2);
-      margin: 14px auto 22px;
-    }
-    .modal-title {
-      font-family: var(--font-display);
-      font-size: 1.125rem;
+    .footer-col h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
       font-weight: 700;
-      text-align: center;
       margin-bottom: 20px;
     }
-    .qr-center { display: flex; justify-content: center; margin-bottom: 18px; }
-    #qr-canvas {
-      border-radius: var(--radius-md);
-      border: 8px solid white;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-    }
-    .share-url {
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { color: var(--text-gray); text-decoration: none; font-size: 0.88rem; }
+    .footer-links a:hover { color: var(--text-white); }
+
+    .footer-bottom {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 12px 14px;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      margin-bottom: 14px;
-    }
-    .share-url-text {
-      flex: 1;
-      font-size: 0.875rem;
-      color: var(--text-2);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .share-copy-btn {
-      flex-shrink: 0;
-      padding: 6px 16px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--g-purple), var(--g-pink));
-      color: white;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      font-family: var(--font-display);
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-    .share-copy-btn:hover { opacity: 0.88; }
-    .share-copy-btn:active { transform: scale(0.95); }
-    .modal-close-btn {
-      width: 100%;
-      padding: 14px;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-2);
-      font-size: 0.9375rem;
-      font-weight: 600;
-      font-family: var(--font-display);
-      transition: all 0.2s ease;
-    }
-    .modal-close-btn:hover { background: var(--surface-2); }
-
-    /* ═══════════════════════════════════════════
-       SCROLL REVEAL
-    ═══════════════════════════════════════════ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
-    }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-
-    /* ═══════════════════════════════════════════
-       ENTRANCE ANIMATION
-    ═══════════════════════════════════════════ */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
+      justify-content: space-between;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
 
-    /* ═══════════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════════ */
-    @media (max-width: 380px) {
-      :root { --px: 12px; }
-      .profile-name { font-size: 1.5rem; }
-      .bento { gap: 8px; }
-      .actions-row { grid-template-columns: 1fr; }
-      .stats-row { gap: 8px; }
+    /* Toast */
+    .toast-container {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      z-index: 1000; display: flex; flex-direction: column; gap: 8px; pointer-events: none;
     }
-    @media (min-width: 600px) {
-      .avatar-img, .avatar-wrap { width: 116px; height: 116px; }
-      .profile-name { font-size: 2rem; }
+    .toast {
+      background: #0B0F19; border: 1px solid var(--accent-blue);
+      padding: 10px 18px; border-radius: var(--radius-full);
+      color: #FFF; font-size: 0.85rem; font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 2px; }
+    /* Responsive Breakdown */
+    @media (max-width: 1024px) {
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid, .trust-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cta-banner { flex-direction: column; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .features-grid, .bento-grid { grid-template-columns: 1fr; }
+      .bento-card.featured { grid-column: span 1; }
+      .nav-links { display: none; }
+      .hero-btns { flex-direction: column; width: 100%; }
+      .btn { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-<!-- Aurora BG -->
-<div class="aurora" aria-hidden="true">
-  <div class="aurora-blob a1"></div>
-  <div class="aurora-blob a2"></div>
-  <div class="aurora-blob a3"></div>
-  <div class="aurora-blob a4"></div>
-</div>
-<div class="particles" id="particles" aria-hidden="true"></div>
+  <!-- NAVIGATION BAR -->
+  <header class="header-nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon-box">🎬</div>
+        <span>Abdulaziz Sagdiyev</span>
+      </a>
 
-<div class="page">
-  <!-- Top Bar -->
-  <nav class="topbar">
-    <button class="theme-btn" id="theme-btn" aria-label="Mavzuni almashtirish">
-      <span id="theme-icon">🌙</span>
-    </button>
-  </nav>
+      <ul class="nav-links">
+        <li><a href="#services" id="nav-serv">Xizmatlar</a></li>
+        <li><a href="#links" id="nav-links">Havolalar</a></li>
+        <li><a href="#brands" id="nav-brands">Brendlar</a></li>
+        <li><a href="#contact" id="nav-contact">Aloqa</a></li>
+      </ul>
 
-  <main class="wrap">
-
-    <!-- HEADER -->
-    <header class="header">
-      <div class="avatar-wrap">
-        <div class="avatar-ring-outer"></div>
-        <div class="avatar-ring-inner"></div>
-        <img id="avatar-img" class="avatar-img" src="avatar.webp" alt="Abdulaziz Sagdiyev"
-          onerror="this.style.display='none';document.getElementById('avatar-fb').style.display='flex';" />
-        <div id="avatar-fb" class="avatar-fallback">A</div>
-        <div class="avatar-badge" id="av-badge" title="Tasdiqlangan">✓</div>
-      </div>
-
-      <div class="profile-info">
-        <h1 class="profile-name" id="p-name">Abdulaziz Sagdiyev</h1>
-        <p class="profile-username" id="p-user">@sagdiyev_abdulaziz</p>
-        <p class="profile-tagline" id="p-tag">Videograf · Marketing · AI Mutaxassisi</p>
-        <p class="profile-bio" id="p-bio">SMM, AI va videografiya sohasidagi mutaxassis. Biznesingizni raqamli dunyoga olib chiqaman. 🎬</p>
-        <div class="status-pill" id="p-status">🟢 Online · Hamkorlikka tayyorman</div>
-        <div class="tags-row" id="tags-row"></div>
-      </div>
-    </header>
-
-    <!-- SOCIAL BAR -->
-    <section class="social-bar" id="social-bar" aria-label="Ijtimoiy tarmoqlar"></section>
-
-    <!-- STATS -->
-    <section class="stats-sec reveal" aria-label="Statistika">
-      <div class="sec-label">
-        <span class="sec-label-text">Statistika</span>
-        <div class="sec-label-line"></div>
-      </div>
-      <div class="stats-row" id="stats-row"></div>
-    </section>
-
-    <!-- BENTO LINKS -->
-    <section class="links-sec reveal" aria-label="Havolalar">
-      <div class="sec-label">
-        <span class="sec-label-text">Havolalar</span>
-        <div class="sec-label-line"></div>
-      </div>
-      <div class="bento" id="bento-grid"></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-sec reveal" aria-label="Aloqa">
-      <div class="sec-label">
-        <span class="sec-label-text">Aloqa</span>
-        <div class="sec-label-line"></div>
-      </div>
-      <div class="contact-list" id="contact-list"></div>
-    </section>
-
-    <!-- ACTIONS -->
-    <section class="actions-sec reveal">
-      <div class="actions-row">
-        <button class="btn btn-primary ripple-host" id="btn-vcard" aria-label="Kontaktni saqlash">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-          Kontakt Saqlash
-        </button>
-        <button class="btn btn-secondary ripple-host" id="btn-share" aria-label="Ulashish">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-          </svg>
-          Ulashish
-        </button>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer reveal">
-      <p class="footer-copy" id="f-copy">© 2025 Abdulaziz Sagdiyev</p>
-      <p class="footer-made">Made with<span class="footer-dot"></span>Link Hub</p>
-    </footer>
-
-  </main>
-</div>
-
-<!-- TOASTS -->
-<div class="toasts" id="toasts" aria-live="polite"></div>
-
-<!-- SHARE MODAL -->
-<div class="modal-bg" id="share-modal" role="dialog" aria-modal="true" aria-label="Ulashish">
-  <div class="modal-sheet">
-    <div class="modal-handle"></div>
-    <h2 class="modal-title">Profilni Ulashish 🔗</h2>
-    <div class="qr-center"><canvas id="qr-canvas" width="180" height="180"></canvas></div>
-    <div class="share-url">
-      <span class="share-url-text" id="modal-url">...</span>
-      <button class="share-copy-btn" id="modal-copy-btn">Nusxa</button>
-    </div>
-    <button class="modal-close-btn" id="modal-close">Yopish</button>
-  </div>
-</div>
-
-<script src="profile.config.js"></script>
-<script>
-(function(){
-'use strict';
-
-/* ─── QR ─────────────────────────────────── */
-function drawQR(url, canvas){
-  const s=180, ctx=canvas.getContext('2d');
-  const img=new Image();
-  img.crossOrigin='anonymous';
-  img.onload=()=>{ ctx.clearRect(0,0,s,s); ctx.drawImage(img,0,0,s,s); };
-  img.onerror=()=>{
-    const g=ctx.createLinearGradient(0,0,s,s);
-    g.addColorStop(0,'#7C3AED'); g.addColorStop(1,'#EC4899');
-    ctx.fillStyle=g; ctx.fillRect(0,0,s,s);
-    ctx.fillStyle='white'; ctx.font='bold 13px Inter';
-    ctx.textAlign='center'; ctx.fillText('QR Code',s/2,s/2-6);
-    ctx.font='11px Inter'; ctx.fillText('(internet kerak)',s/2,s/2+12);
-  };
-  img.src=`https://api.qrserver.com/v1/create-qr-code/?size=${s}x${s}&data=${encodeURIComponent(url)}&color=7C3AED&bgcolor=ffffff&margin=4`;
-}
-
-/* ─── Social SVGs ───────────────────────── */
-const SVGS={
-  telegram:`<svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.35l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.978.21z"/></svg>`,
-  instagram:`<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>`,
-  youtube:`<svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>`,
-  tiktok:`<svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>`,
-  linkedin:`<svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
-};
-
-const CARD_ICONS={ shop:'🛒',youtube:'▶️',portfolio:'💼',chat:'💬',course:'🎓',link:'🔗',music:'🎵',photo:'📸',code:'💻',star:'⭐',photo:'📸' };
-const GRADS={
-  'from-violet-500 to-purple-700':'g-violet',
-  'from-red-500 to-rose-700':'g-red',
-  'from-blue-500 to-cyan-600':'g-blue',
-  'from-emerald-500 to-teal-600':'g-green',
-  'from-amber-500 to-orange-600':'g-amber',
-};
-
-/* ─── Theme ──────────────────────────────── */
-const html=document.documentElement;
-const saved=localStorage.getItem('lh-theme');
-const sysDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
-applyTheme(saved||(sysDark?'dark':'light'));
-function applyTheme(t){
-  html.setAttribute('data-theme',t);
-  document.getElementById('theme-icon').textContent=t==='dark'?'🌙':'☀️';
-}
-document.getElementById('theme-btn').addEventListener('click',()=>{
-  const n=html.getAttribute('data-theme')==='dark'?'light':'dark';
-  applyTheme(n); localStorage.setItem('lh-theme',n);
-});
-
-/* ─── Toast ──────────────────────────────── */
-function toast(msg,ico='✅',dur=2800){
-  const el=document.createElement('div');
-  el.className='toast';
-  el.innerHTML=`<span>${ico}</span><span>${msg}</span>`;
-  document.getElementById('toasts').prepend(el);
-  setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>el.remove(),300); },dur);
-}
-
-/* ─── Copy ───────────────────────────────── */
-function copy(text,label){
-  (navigator.clipboard?navigator.clipboard.writeText(text):Promise.resolve(document.execCommand('copy')))
-    .then(()=>toast(label+' nusxalandi!','📋'))
-    .catch(()=>toast('Nusxalashda xatolik','⚠️'));
-}
-
-/* ─── Ripple ─────────────────────────────── */
-function ripple(el){
-  el.addEventListener('click',e=>{
-    const r=el.getBoundingClientRect(),s=Math.max(r.width,r.height);
-    const sp=document.createElement('span');
-    sp.className='ripple';
-    sp.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-r.left-s/2}px;top:${e.clientY-r.top-s/2}px`;
-    el.appendChild(sp);
-    setTimeout(()=>sp.remove(),560);
-  });
-}
-
-/* ─── Particles ──────────────────────────── */
-function initParticles(){
-  const container=document.getElementById('particles');
-  for(let i=0;i<18;i++){
-    const p=document.createElement('div');
-    p.className='particle';
-    const size=Math.random()*3+1;
-    p.style.cssText=`
-      width:${size}px;height:${size}px;
-      left:${Math.random()*100}%;
-      bottom:-10px;
-      animation-duration:${Math.random()*12+8}s;
-      animation-delay:${Math.random()*10}s;
-      opacity:0;
-    `;
-    container.appendChild(p);
-  }
-}
-
-/* ─── vCard ──────────────────────────────── */
-function makeVCard(v){
-  return ['BEGIN:VCARD','VERSION:3.0',`N:${v.lastName};${v.firstName};;;`,
-    `FN:${v.firstName} ${v.lastName}`,`ORG:${v.org}`,`TITLE:${v.title}`,
-    `TEL;TYPE=CELL:${v.phone}`,`EMAIL:${v.email}`,`URL:${v.website}`,
-    `X-SOCIALPROFILE;type=telegram:${v.telegram}`,
-    `X-SOCIALPROFILE;type=instagram:${v.instagram}`,
-    'END:VCARD'].join('\n');
-}
-function downloadVCard(cfg){
-  const b=new Blob([makeVCard(cfg.vcard)],{type:'text/vcard;charset=utf-8'});
-  const u=URL.createObjectURL(b),a=document.createElement('a');
-  a.href=u; a.download=`${cfg.vcard.firstName}_${cfg.vcard.lastName}.vcf`;
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
-  URL.revokeObjectURL(u); toast('Kontakt saqlandi!','👤');
-}
-
-/* ─── Share Modal ────────────────────────── */
-let qrDone=false;
-const modal=document.getElementById('share-modal');
-function openModal(cfg){
-  const url=cfg.seo.siteUrl||location.href;
-  document.getElementById('modal-url').textContent=url;
-  modal.classList.add('open');
-  document.body.style.overflow='hidden';
-  if(!qrDone){ drawQR(url,document.getElementById('qr-canvas')); qrDone=true; }
-}
-function closeModal(){
-  modal.classList.remove('open');
-  document.body.style.overflow='';
-}
-document.getElementById('modal-close').addEventListener('click',closeModal);
-modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
-document.getElementById('modal-copy-btn').addEventListener('click',()=>{
-  const url=document.getElementById('modal-url').textContent;
-  if(navigator.share) navigator.share({title:document.title,url});
-  copy(url,'Havola');
-});
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
-
-/* ─── Scroll Reveal ──────────────────────── */
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }});
-},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-
-/* ─── RENDER ─────────────────────────────── */
-function init(){
-  const cfg=typeof profileConfig!=='undefined'?profileConfig:null;
-  if(!cfg){ console.error('[LinkHub] Config topilmadi'); return; }
-
-  /* SEO */
-  document.getElementById('page-title').textContent=cfg.seo.title;
-  document.getElementById('page-description').content=cfg.seo.description;
-  document.getElementById('og-title').content=cfg.seo.title;
-  document.getElementById('og-description').content=cfg.seo.description;
-  document.getElementById('og-image').content=cfg.seo.ogImage;
-  document.getElementById('og-url').content=cfg.seo.siteUrl;
-  document.getElementById('tw-title').content=cfg.seo.title;
-  document.getElementById('tw-description').content=cfg.seo.description;
-  document.getElementById('tw-image').content=cfg.seo.ogImage;
-  document.getElementById('canonical').href=cfg.seo.siteUrl;
-
-  /* Profile */
-  document.getElementById('p-name').textContent=cfg.name;
-  document.getElementById('p-user').textContent=cfg.username;
-  document.getElementById('p-tag').textContent=cfg.tagline;
-  document.getElementById('p-bio').textContent=cfg.bio;
-  document.getElementById('p-status').textContent=cfg.status;
-  document.getElementById('f-copy').textContent=cfg.footer.copyright;
-  if(!cfg.verified) document.getElementById('av-badge').style.display='none';
-
-  /* Tags */
-  const tags=['Videograf','SMM','AI Tools','Marketing','Kontent'];
-  const tagsRow=document.getElementById('tags-row');
-  tags.forEach(t=>{ const el=document.createElement('span'); el.className='tag'; el.textContent=t; tagsRow.appendChild(el); });
-
-  /* Stats */
-  const stats=[
-    {num:'5+',  label:'Yil tajriba'},
-    {num:'120+',label:'Loyihalar'},
-    {num:'24/7',label:'Onlayn'},
-  ];
-  const statsRow=document.getElementById('stats-row');
-  stats.forEach(s=>{
-    const el=document.createElement('div');
-    el.className='stat-card';
-    el.innerHTML=`<div class="stat-num">${s.num}</div><div class="stat-label">${s.label}</div>`;
-    statsRow.appendChild(el);
-  });
-
-  /* Socials */
-  const sBar=document.getElementById('social-bar');
-  cfg.socials.forEach(s=>{
-    const a=document.createElement('a');
-    a.href=s.url; a.target='_blank'; a.rel='noopener noreferrer';
-    a.className='social-btn';
-    a.style.setProperty('--s-color',s.color);
-    a.setAttribute('aria-label',s.label);
-    a.innerHTML=`${SVGS[s.icon]||''}<span class="social-label">${s.label}</span>`;
-    sBar.appendChild(a);
-  });
-
-  /* Bento Cards */
-  const grid=document.getElementById('bento-grid');
-  cfg.links.forEach((lk,i)=>{
-    const gradCls=GRADS[lk.gradient]||'g-violet';
-    const ico=CARD_ICONS[lk.icon]||'🔗';
-    const card=document.createElement('a');
-    card.href=lk.url; card.target='_blank'; card.rel='noopener noreferrer';
-    card.className='card ripple-host'+(lk.isFeatured?' featured':'');
-    card.id='card-'+lk.id;
-    card.setAttribute('aria-label',lk.title);
-    card.innerHTML=`
-      <div class="card-grad ${gradCls}"></div>
-      <div class="card-shimmer"></div>
-      ${lk.badge?`<span class="card-badge">${lk.badge}</span>`:''}
-      <div class="card-body">
-        <div class="card-icon">${ico}</div>
-        <div class="card-content">
-          <p class="card-title">${lk.title}</p>
-          ${lk.subtitle?`<p class="card-sub">${lk.subtitle}</p>`:''}
+      <div class="nav-right-controls">
+        <!-- Live Weather Widget -->
+        <div class="weather-widget" id="weather-widget">
+          <span id="weather-icon">☀️</span>
+          <span id="weather-city">Toshkent</span>
+          <span class="weather-temp" id="weather-temp">+28°C</span>
         </div>
-        ${lk.isFeatured?`<div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>`:''}
-      </div>`;
-    ripple(card);
-    grid.appendChild(card);
-  });
 
-  /* Contact */
-  const contacts=[
-    {label:'Telefon',value:cfg.contact.phone,icon:'📞',copy:cfg.contact.phone},
-    {label:'Email',  value:cfg.contact.email,  icon:'✉️',  copy:cfg.contact.email},
-    {label:'Joylashuv',value:cfg.contact.location,icon:'📍',copy:null},
-  ];
-  const cList=document.getElementById('contact-list');
-  contacts.forEach(c=>{
-    const el=document.createElement('div');
-    el.className='contact-item';
-    if(c.copy){ el.setAttribute('role','button'); el.setAttribute('tabindex','0'); }
-    el.innerHTML=`
-      <div class="contact-icon-wrap">${c.icon}</div>
-      <div class="contact-text">
-        <p class="contact-label">${c.label}</p>
-        <p class="contact-value">${c.value}</p>
+        <!-- Sleek Circular Clock Widget -->
+        <div class="circular-clock-widget" id="clock-widget" title="Toshkent vaqti">
+          <svg class="analog-clock-svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8"/>
+            <circle cx="50" cy="50" r="44" fill="none" stroke="var(--accent-blue-light)" stroke-width="8" stroke-dasharray="276" stroke-dashoffset="0" id="clock-sec-ring"/>
+            <line x1="50" y1="50" x2="50" y2="24" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" id="clock-hour-hand"/>
+            <line x1="50" y1="50" x2="50" y2="16" stroke="var(--accent-blue-light)" stroke-width="6" stroke-linecap="round" id="clock-min-hand"/>
+            <line x1="50" y1="50" x2="50" y2="12" stroke="#EF4444" stroke-width="3" stroke-linecap="round" id="clock-sec-hand"/>
+            <circle cx="50" cy="50" r="6" fill="#FFFFFF"/>
+          </svg>
+          <span id="clock-time">15:40:00</span>
+        </div>
+
+        <!-- Language Switcher (UZ / RU) -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-uz" onclick="setLanguage('uz')">UZ</button>
+          <button class="lang-btn" id="btn-ru" onclick="setLanguage('ru')">RU</button>
+        </div>
       </div>
-      ${c.copy?`<div class="contact-copy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Nusxa</div>`:''}`;
-    if(c.copy){
-      const fn=()=>copy(c.copy,c.label);
-      el.addEventListener('click',fn);
-      el.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' ') fn(); });
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="hero-pill" id="h-pill">🟢 Online · Ish vaqti: 10:00 - 18:00 (Du-Sha)</div>
+        <h1 class="hero-title" id="h-title">
+          Abdulaziz Sagdiyev — <span class="text-accent">Videograf, Fotograf & SMM</span>
+        </h1>
+        <p class="hero-desc" id="h-desc">
+          Videograf, Fotograf, SMM va AI sohasidagi mutaxassis. Biznesingiz uchun professional vizual kontent va ijtimoiy tarmoqlarni strategik rivojlantirish. 🎬
+        </p>
+
+        <div class="hero-btns">
+          <a href="https://t.me/Sagdiyev_Abdulaziz_portfolio" target="_blank" class="btn btn-primary" id="h-btn-main">
+            📁 Portfolio (Loyihalar)
+          </a>
+          <a href="https://t.me/sagdiyev_abdulaziz" target="_blank" class="btn btn-secondary" id="h-btn-sub">
+            💬 Telegram Orqali Aloqa
+          </a>
+        </div>
+
+        <div class="hero-checks">
+          <div class="check-item"><span class="check-icon">✓</span> <span>Videografiya</span></div>
+          <div class="check-item"><span class="check-icon">✓</span> <span>Fotografiya</span></div>
+          <div class="check-item"><span class="check-icon">✓</span> <span>SMM Marketing</span></div>
+          <div class="check-item"><span class="check-icon">✓</span> <span>AI Vositalari</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual-wrap">
+        <div class="hero-glow"></div>
+        <div class="hero-portrait-frame">
+          <img src="avatar.webp" alt="Abdulaziz Sagdiyev" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="section-padding" id="services">
+    <div class="container">
+      <div class="sec-header">
+        <h2 class="sec-title" id="s-sec-title">Mening Professional <span class="text-accent">Xizmatlarim</span></h2>
+        <p class="sec-desc" id="s-sec-desc">Sifatli vizual kontent va zamonaviy marketing texnologiyalari majmuasi.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">📹</div>
+          <h3 class="feature-title" id="srv-1-t">High-End Videografiya</h3>
+          <p class="feature-desc" id="srv-1-d">Yuqori sifatli roliklar, Reels, Shorts va reklama videolarni professional suratga olish va montaj qilish.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">📸</div>
+          <h3 class="feature-title" id="srv-2-t">Professional Fotografiya</h3>
+          <p class="feature-desc" id="srv-2-d">Brending va mahsulotlar uchun yuqori darajadagi foto sessiyalar hamda estetik vizual kontent.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">📈</div>
+          <h3 class="feature-title" id="srv-3-t">SMM va Marketing</h3>
+          <p class="feature-desc" id="srv-3-d">Ijtimoiy tarmoqlardagi sahifalaringizni maqsadli auditoriyaga mos strategik yondashuv bilan boshqarish.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🧠</div>
+          <h3 class="feature-title" id="srv-4-t">AI Vositalari & Avtomatlashtirish</h3>
+          <p class="feature-desc" id="srv-4-d">Biznes va kontent yaratish jarayonlarini tezlashtirish uchun neyrotarmoqlar va AI vositalarini joriy qilish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENTO LINKS SECTION -->
+  <section class="section-padding" id="links" style="background: rgba(15, 20, 32, 0.4);">
+    <div class="container">
+      <div class="sec-header">
+        <h2 class="sec-title" id="l-sec-title">Asosiy Havolalar va <span class="text-accent">Kanallar</span></h2>
+        <p class="sec-desc" id="l-sec-desc">Mening barcha ijtimoiy tarmoqlarim va portfolio ishlarim bilan tanishing.</p>
+      </div>
+
+      <div class="bento-grid">
+        <a href="https://t.me/Sagdiyev_Abdulaziz_portfolio" target="_blank" class="bento-card featured">
+          <div class="bento-icon-box">⭐</div>
+          <div class="bento-content">
+            <div class="bento-title" id="lk-1-t">📁 Portfolio (Loyihalar)</div>
+            <div class="bento-sub" id="lk-1-s">Mening eng saralangan portfolio va bajarilgan ishlarim</div>
+          </div>
+          <div class="bento-arrow">→</div>
+        </a>
+
+        <a href="https://t.me/sagdiyev_abdulaziz" target="_blank" class="bento-card featured">
+          <div class="bento-icon-box">💬</div>
+          <div class="bento-content">
+            <div class="bento-title" id="lk-2-t">📢 Telegram Kanal</div>
+            <div class="bento-sub" id="lk-2-s">Marketing, AI va kontent bo'yicha foydali postlar</div>
+          </div>
+          <div class="bento-arrow">→</div>
+        </a>
+
+        <a href="https://youtube.com/@sagdiyev_abdulaziz?si=BzhWF-FQzjlg-yl9" target="_blank" class="bento-card">
+          <div class="bento-icon-box">▶️</div>
+          <div class="bento-content">
+            <div class="bento-title">▶️ YouTube Kanal</div>
+            <div class="bento-sub" id="lk-3-s">Video darsliklar va amaliy qo'llanmalar</div>
+          </div>
+          <div class="bento-arrow">→</div>
+        </a>
+
+        <a href="https://www.instagram.com/sagdiyev_abdulaziz?igsh=MTd4bnM0a3dldXBldw==" target="_blank" class="bento-card">
+          <div class="bento-icon-box">📸</div>
+          <div class="bento-content">
+            <div class="bento-title">📸 Instagram</div>
+            <div class="bento-sub" id="lk-4-s">Kundalik hayot, ishlar va loyihalar</div>
+          </div>
+          <div class="bento-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS SECTION -->
+  <section class="section-padding" id="brands">
+    <div class="container">
+      <div class="sec-header">
+        <h2 class="sec-title" id="b-sec-title">🤝 Shaxsiy & Hamkor <span class="text-accent">Brendlarim</span></h2>
+        <p class="sec-desc" id="b-sec-desc">Mening shaxsiy loyiham va texnik hamkorlarim.</p>
+      </div>
+
+      <div class="brands-grid">
+        <a href="https://www.instagram.com/sagdiyev_abdulloh?igsh=aHZuZHJkMHd0amJ4&igsi=aHZuZHJkMHd0amJ4" target="_blank" class="brand-card">
+          <div class="brand-img-wrap">
+            <img class="brand-img" src="brand-abdulloh.png" alt="Abdulloh Barber" />
+          </div>
+          <div>
+            <div class="brand-name">Abdulloh Barber</div>
+            <div class="brand-sub">Shaxsiy Brend</div>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/photobuy.uz?igsh=MmJlZG9pamE1dWE3&igsi=MmJlZG9pamE1dWE3" target="_blank" class="brand-card">
+          <div class="brand-img-wrap">
+            <img class="brand-img" src="brand-photobuy.png" alt="Photobuy.uz" />
+          </div>
+          <div>
+            <div class="brand-name">Photobuy.uz</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST & TESTIMONIAL SECTION -->
+  <section class="section-padding" style="background: rgba(15, 20, 32, 0.4);">
+    <div class="container trust-grid">
+      <div class="stats-list">
+        <div class="stat-item">
+          <div class="stat-icon">⚡</div>
+          <div>
+            <div class="stat-num">3+ Yil</div>
+            <div class="stat-sub" id="st-1">Professional Tajriba</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">🕒</div>
+          <div>
+            <div class="stat-num">10:00 - 18:00</div>
+            <div class="stat-sub" id="st-2">Du - Sha (Ish Vaqti)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text" id="t-quote" style="margin-bottom:0;">
+          "Abdulaziz bilan ishlash biznesimiz uchun eng to'g'ri qaror bo'ldi. SMM va video kontent borasida sotuvlarimiz 2 barobarga oshdi!"
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="sec-header">
+        <h2 class="sec-title" id="c-sec-title">Aloqa va <span class="text-accent">Bog'lanish</span></h2>
+        <p class="sec-desc" id="c-sec-desc">Hamkorlik va takliflar uchun bevosita murojaat qiling.</p>
+      </div>
+
+      <div class="contact-list" style="max-width:680px; margin:0 auto;">
+        <div class="contact-item" onclick="revealPhone(this)">
+          <div class="contact-icon-wrap">📞</div>
+          <div class="contact-text">
+            <div class="contact-label" id="cl-1">TELEFON</div>
+            <div class="contact-value" id="phone-val">📞 Qo'ng'iroq qilish</div>
+          </div>
+          <div class="contact-copy-btn" id="cp-1">Nusxa</div>
+        </div>
+
+        <div class="contact-item" onclick="copy('abdulazizsagdiyev@gmail.com', 'Email')">
+          <div class="contact-icon-wrap">✉️</div>
+          <div class="contact-text">
+            <div class="contact-label">EMAIL</div>
+            <div class="contact-value">abdulazizsagdiyev@gmail.com</div>
+          </div>
+          <div class="contact-copy-btn">Nusxa</div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon-wrap">📍</div>
+          <div class="contact-text">
+            <div class="contact-label" id="cl-3">JOYLASHUV</div>
+            <div class="contact-value" id="cv-3">Toshkent, O'zbekiston 🇺🇿</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING / CTA BANNER -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:1.8rem; font-weight:800; margin-bottom:8px;" id="pb-title">
+            Hamkorlikni Bugun Boshlang
+          </h3>
+          <p style="color:var(--text-gray);" id="pb-desc">Professional vizual kontent va SMM bilan biznesingizni rivojlantiring.</p>
+        </div>
+
+        <a href="https://t.me/sagdiyev_abdulaziz" target="_blank" class="btn btn-primary" id="pb-btn">
+          Murojaat Qilish 🚀
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom:16px;">
+            <div class="logo-icon-box">🎬</div>
+            <span>Abdulaziz Sagdiyev</span>
+          </div>
+          <p style="color:var(--text-gray); font-size:0.88rem; max-width:280px;" id="f-desc">
+            Videografiya, Fotografiya, SMM va AI vositalari orqali biznesingizni rivojlantiring.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="fc-1">Menu</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Xizmatlar</a></li>
+            <li><a href="#links">Havolalar</a></li>
+            <li><a href="#brands">Brendlar</a></li>
+            <li><a href="#contact">Aloqa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="fc-2">Ijtimoiy Tarmoqlar</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/sagdiyev_abdulaziz" target="_blank">Telegram</a></li>
+            <li><a href="https://instagram.com/sagdiyev_abdulaziz" target="_blank">Instagram</a></li>
+            <li><a href="https://youtube.com/@sagdiyev_abdulaziz" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="fc-3">Rasmiy Manzil</h4>
+          <p style="color:var(--text-gray); font-size:0.88rem;">Toshkent, O'zbekiston 🇺🇿</p>
+          <p style="color:var(--accent-blue-light); font-weight:600; font-size:0.88rem; margin-top:8px;">sagdiyevabdulaziz.uz</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Abdulaziz Sagdiyev. Barcha huquqlar himoyalangan.</div>
+        <div>sagdiyevabdulaziz.uz</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toasts"></div>
+
+  <!-- MULTILINGUAL DICTIONARY & LIVE WEATHER SCRIPT -->
+  <script src="profile.config.js?v=4.0"></script>
+  <script>
+    /* ═══════════════════════════════════════════
+       MULTILINGUAL DICTIONARY (UZ / RU) FOR REAL PROFILE
+    ═══════════════════════════════════════════ */
+    const I18N = {
+      uz: {
+        navServ: "Xizmatlar",
+        navLinks: "Havolalar",
+        navBrands: "Brendlar",
+        navContact: "Aloqa",
+        hPill: "🟢 Online · Ish vaqti: 10:00 - 18:00 (Du-Sha)",
+        hTitle: 'Abdulaziz Sagdiyev — <span class="text-accent">Videograf, Fotograf & SMM</span>',
+        hDesc: "Videograf, Fotograf, SMM va AI sohasidagi mutaxassis. Biznesingiz uchun professional vizual kontent va ijtimoiy tarmoqlarni strategik rivojlantirish. 🎬",
+        hBtnMain: "📁 Portfolio (Loyihalar)",
+        hBtnSub: "💬 Telegram Orqali Aloqa",
+        sSecTitle: 'Mening Professional <span class="text-accent">Xizmatlarim</span>',
+        sSecDesc: "Sifatli vizual kontent va zamonaviy marketing texnologiyalari majmuasi.",
+        srv1t: "High-End Videografiya",
+        srv1d: "Yuqori sifatli roliklar, Reels, Shorts va reklama videolarni professional suratga olish va montaj qilish.",
+        srv2t: "Professional Fotografiya",
+        srv2d: "Brending va mahsulotlar uchun yuqori darajadagi foto sessiyalar hamda estetik vizual kontent.",
+        srv3t: "SMM va Marketing",
+        srv3d: "Ijtimoiy tarmoqlardagi sahifalaringizni maqsadli auditoriyaga mos strategik yondashuv bilan boshqarish.",
+        srv4t: "AI Vositalari & Avtomatlashtirish",
+        srv4d: "Biznes va kontent yaratish jarayonlarini tezlashtirish uchun neyrotarmoqlar va AI vositalarini joriy qilish.",
+        lSecTitle: 'Asosiy Havolalar va <span class="text-accent">Kanallar</span>',
+        lSecDesc: "Mening barcha ijtimoiy tarmoqlarim va portfolio ishlarim bilan tanishing.",
+        lk1t: "📁 Portfolio (Loyihalar)",
+        lk1s: "Mening eng saralangan portfolio va bajarilgan ishlarim",
+        lk2t: "📢 Telegram Kanal",
+        lk2s: "Marketing, AI va kontent bo'yicha foydali postlar",
+        lk3s: "Video darsliklar va amaliy qo'llanmalar",
+        lk4s: "Kundalik hayot, ishlar va loyihalar",
+        bSecTitle: '🤝 Birga Ishlaydigan <span class="text-accent">Brendlarim</span>',
+        bSecDesc: "Mening ish faoliyatim va texnik hamkorlarim.",
+        st1: "Professional Tajriba",
+        st2: "Du - Sha (Ish Vaqti)",
+        tQuote: '"Abdulaziz bilan ishlash biznesimiz uchun eng to\'g\'ri qaror bo\'ldi. SMM va video kontent borasida sotuvlarimiz 2 barobarga oshdi!"',
+        tRole: "Barber Shop Asoschisi & Mentor",
+        cSecTitle: 'Aloqa va <span class="text-accent">Bog\'lanish</span>',
+        cSecDesc: "Hamkorlik va takliflar uchun bevosita murojaat qiling.",
+        cl1: "TELEFON", cl3: "JOYLASHUV", cv3: "Toshkent, O'zbekiston 🇺🇿",
+        pbTitle: "Hamkorlikni Bugun Boshlang",
+        pbDesc: "Professional vizual kontent va SMM bilan biznesingizni rivojlantiring.",
+        pbBtn: "Murojaat Qilish 🚀",
+        fDesc: "Videografiya, Fotografiya, SMM va AI vositalari orqali biznesingizni rivojlantiring.",
+        fc1: "Menu", fc2: "Ijtimoiy Tarmoqlar", fc3: "Rasmiy Manzil"
+      },
+      ru: {
+        navServ: "Услуги",
+        navLinks: "Ссылки",
+        navBrands: "Бренды",
+        navContact: "Контакты",
+        hPill: "🟢 Online · Время работы: 10:00 - 18:00 (Пн-Сб)",
+        hTitle: 'Абдулазиз Сагдиев — <span class="text-accent">Видеограф, Фотограф & SMM</span>',
+        hDesc: "Специалист в сфере видеографии, фотографии, SMM и ИИ. Профессиональный визуальный контент и стратегическое развитие соцсетей для вашего бизнеса. 🎬",
+        hBtnMain: "📁 Портфолио (Проекты)",
+        hBtnSub: "💬 Связаться в Telegram",
+        sSecTitle: 'Мои Профессиональные <span class="text-accent">Услуги</span>',
+        sSecDesc: "Комплекс качественного визуального контента и современных маркетинговых технологий.",
+        srv1t: "High-End Видеография",
+        srv1d: "Профессиональная съемка и монтаж качественных роликов, Reels, Shorts и рекламного видео.",
+        srv2t: "Профессиональная Фотография",
+        srv2d: "Высококлассные фотосессии и эстетичный визуальный контент для брендинга и товаров.",
+        srv3t: "SMM и Маркетинг",
+        srv3d: "Стратегическое управление вашими соцсетями под целевую аудиторию.",
+        srv4t: "ИИ-Инструменты и Автоматизация",
+        srv4d: "Внедрение нейросетей и ИИ-инструментов для ускорения бизнес-процессов и создания контента.",
+        lSecTitle: 'Основные Ссылки и <span class="text-accent">Каналы</span>',
+        lSecDesc: "Ознакомьтесь со всеми моими соцсетями и портфолио работ.",
+        lk1t: "📁 Портфолио (Проекты)",
+        lk1s: "Мои лучшие избранные работы и проекты",
+        lk2t: "📢 Telegram Канал",
+        lk2s: "Полезные посты по маркетингу, ИИ и контенту",
+        lk3s: "Видеоуроки и практические руководства",
+        lk4s: "Повседневная жизнь, работы и проекты",
+        bSecTitle: '🤝 Бренды С Которыми <span class="text-accent">Я Работаю</span>',
+        bSecDesc: "Моя профессиональная деятельность и технические партнеры.",
+        st1: "Профессиональный Опыт",
+        st2: "Пн - Сб (Время работы)",
+        tQuote: '"Работа с Абдулазизом стала лучшим решением для нашего бизнеса. Продажи через SMM и видео контент выросли в 2 раза!"',
+        tRole: "Основатель Barber Shop и Ментор",
+        cSecTitle: 'Связаться <span class="text-accent">Со Мной</span>',
+        cSecDesc: "Прямые контакты для сотрудничества и предложений.",
+        cl1: "ТЕЛЕФОН", cl3: "ЛОКАЦИЯ", cv3: "Ташкент, Узбекистан 🇺🇿",
+        pbTitle: "Начните Сотрудничество Сегодня",
+        pbDesc: "Развивайте ваш бизнес с помощью профессионального контента и SMM.",
+        pbBtn: "Связаться 🚀",
+        fDesc: "Развивайте ваш бизнес с помощью видеографии, фотографии, SMM и ИИ.",
+        fc1: "Меню", fc2: "Социальные Сети", fc3: "Официальный Адрес"
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = I18N[lang] || I18N.uz;
+      document.getElementById('btn-uz').classList.toggle('active', lang === 'uz');
+      document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+
+      document.getElementById('nav-serv').textContent = dict.navServ;
+      document.getElementById('nav-links').textContent = dict.navLinks;
+      document.getElementById('nav-brands').textContent = dict.navBrands;
+      document.getElementById('nav-contact').textContent = dict.navContact;
+
+      document.getElementById('h-pill').textContent = dict.hPill;
+      document.getElementById('h-title').innerHTML = dict.hTitle;
+      document.getElementById('h-desc').textContent = dict.hDesc;
+      document.getElementById('h-btn-main').textContent = dict.hBtnMain;
+      document.getElementById('h-btn-sub').textContent = dict.hBtnSub;
+
+      document.getElementById('s-sec-title').innerHTML = dict.sSecTitle;
+      document.getElementById('s-sec-desc').textContent = dict.sSecDesc;
+      document.getElementById('srv-1-t').textContent = dict.srv1t;
+      document.getElementById('srv-1-d').textContent = dict.srv1d;
+      document.getElementById('srv-2-t').textContent = dict.srv2t;
+      document.getElementById('srv-2-d').textContent = dict.srv2d;
+      document.getElementById('srv-3-t').textContent = dict.srv3t;
+      document.getElementById('srv-3-d').textContent = dict.srv3d;
+      document.getElementById('srv-4-t').textContent = dict.srv4t;
+      document.getElementById('srv-4-d').textContent = dict.srv4d;
+
+      document.getElementById('l-sec-title').innerHTML = dict.lSecTitle;
+      document.getElementById('l-sec-desc').textContent = dict.lSecDesc;
+      document.getElementById('lk-1-t').textContent = dict.lk1t;
+      document.getElementById('lk-1-s').textContent = dict.lk1s;
+      document.getElementById('lk-2-t').textContent = dict.lk2t;
+      document.getElementById('lk-2-s').textContent = dict.lk2s;
+      document.getElementById('lk-3-s').textContent = dict.lk3s;
+      document.getElementById('lk-4-s').textContent = dict.lk4s;
+
+      document.getElementById('b-sec-title').innerHTML = dict.bSecTitle;
+      document.getElementById('b-sec-desc').textContent = dict.bSecDesc;
+
+      document.getElementById('st-1').textContent = dict.st1;
+      document.getElementById('st-2').textContent = dict.st2;
+      document.getElementById('t-quote').textContent = dict.tQuote;
+      document.getElementById('t-role').textContent = dict.tRole;
+
+      document.getElementById('c-sec-title').innerHTML = dict.cSecTitle;
+      document.getElementById('c-sec-desc').textContent = dict.cSecDesc;
+      document.getElementById('cl-1').textContent = dict.cl1;
+      document.getElementById('cl-3').textContent = dict.cl3;
+      document.getElementById('cv-3').textContent = dict.cv3;
+
+      document.getElementById('pb-title').textContent = dict.pbTitle;
+      document.getElementById('pb-desc').textContent = dict.pbDesc;
+      document.getElementById('pb-btn').textContent = dict.pbBtn;
+      document.getElementById('f-desc').textContent = dict.fDesc;
+      document.getElementById('fc-1').textContent = dict.fc1;
+      document.getElementById('fc-2').textContent = dict.fc2;
+      document.getElementById('fc-3').textContent = dict.fc3;
+
+      localStorage.setItem('profile_lang', lang);
     }
-    cList.appendChild(el);
-  });
 
-  /* Buttons */
-  document.getElementById('btn-vcard').addEventListener('click',()=>downloadVCard(cfg));
-  ripple(document.getElementById('btn-vcard'));
-  document.getElementById('btn-share').addEventListener('click',()=>openModal(cfg));
-  ripple(document.getElementById('btn-share'));
+    // Auto load saved language
+    const savedLang = localStorage.getItem('profile_lang') || 'uz';
+    setLanguage(savedLang);
 
-  /* Scroll reveal */
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    /* ─── PHONE REVEAL LOGIC ───────────────────────── */
+    function revealPhone(el) {
+      const pVal = document.getElementById('phone-val');
+      const phoneNum = "+998 91 009 04 19";
+      if (pVal) pVal.textContent = phoneNum;
+      copy(phoneNum, 'Telefon raqam');
+      setTimeout(() => { window.location.href = 'tel:+998910090419'; }, 300);
+    }
 
-  console.log('[LinkHub] ✅ Ready');
-}
+    /* ─── TOAST & COPY NOTIFICATIONS ───────────────── */
+    function toast(msg, ico = '✨', dur = 2800) {
+      const container = document.getElementById('toasts');
+      const el = document.createElement('div');
+      el.className = 'toast';
+      el.innerHTML = `<span>${ico}</span> <span>${msg}</span>`;
+      container.appendChild(el);
+      setTimeout(() => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(10px)';
+        setTimeout(() => el.remove(), 300);
+      }, dur);
+    }
 
-initParticles();
-if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
-else init();
+    function copy(text, label) {
+      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.resolve(document.execCommand('copy')))
+        .then(() => toast(label + ' nusxalandi!', '📋'))
+        .catch(() => toast('Nusxalashda xatolik', '⚠️'));
+    }
 
-})();
-</script>
+    /* ─── REAL-TIME CIRCULAR CLOCK LOGIC ──────────── */
+    function updateClock() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      const hDeg = (hours % 12 + minutes / 60) * 30;
+      const mDeg = (minutes + seconds / 60) * 6;
+      const sDeg = seconds * 6;
+      const sOffset = 276 - (seconds / 60) * 276;
+
+      const hHand = document.getElementById('clock-hour-hand');
+      const mHand = document.getElementById('clock-min-hand');
+      const sHand = document.getElementById('clock-sec-hand');
+      const sRing = document.getElementById('clock-sec-ring');
+      const cTime = document.getElementById('clock-time');
+
+      if (hHand) hHand.setAttribute('transform', `rotate(${hDeg} 50 50)`);
+      if (mHand) mHand.setAttribute('transform', `rotate(${mDeg} 50 50)`);
+      if (sHand) sHand.setAttribute('transform', `rotate(${sDeg} 50 50)`);
+      if (sRing) sRing.style.strokeDashoffset = sOffset;
+      if (cTime) {
+        const hh = String(hours).padStart(2, '0');
+        const mm = String(minutes).padStart(2, '0');
+        const ss = String(seconds).padStart(2, '0');
+        cTime.textContent = `${hh}:${mm}:${ss}`;
+      }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    /* ─── REAL-TIME WEATHER WIDGET (OPEN-METEO API) ─── */
+    async function fetchTashkentWeather() {
+      try {
+        const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=41.2995&longitude=69.2401&current_weather=true');
+        const data = await res.json();
+        if (data && data.current_weather) {
+          const temp = Math.round(data.current_weather.temperature);
+          const code = data.current_weather.weathercode;
+          const isDay = data.current_weather.is_day !== 0;
+
+          let icon = isDay ? '☀️' : '🌙';
+          if (code >= 1 && code <= 3) icon = isDay ? '⛅' : '☁️';
+          else if (code >= 45 && code <= 48) icon = '🌫️';
+          else if (code >= 51 && code <= 67) icon = '🌧️';
+          else if (code >= 71 && code <= 86) icon = '❄️';
+          else if (code >= 95) icon = '🌩️';
+
+          document.getElementById('weather-icon').textContent = icon;
+          document.getElementById('weather-temp').textContent = (temp > 0 ? '+' : '') + temp + '°C';
+        }
+      } catch (err) {
+        console.warn('Weather fetch fallback:', err);
+      }
+    }
+    fetchTashkentWeather();
+  </script>
 </body>
 </html>
