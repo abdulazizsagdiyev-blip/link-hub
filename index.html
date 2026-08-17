@@ -1212,61 +1212,67 @@
 
     function setLanguage(lang) {
       const dict = I18N[lang] || I18N.uz;
-      document.getElementById('btn-uz').classList.toggle('active', lang === 'uz');
-      document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+      const setTxt = (id, val, isHtml = false) => {
+        const el = document.getElementById(id);
+        if (el) {
+          if (isHtml) el.innerHTML = val;
+          else el.textContent = val;
+        }
+      };
 
-      document.getElementById('nav-serv').textContent = dict.navServ;
-      document.getElementById('nav-links').textContent = dict.navLinks;
-      document.getElementById('nav-brands').textContent = dict.navBrands;
-      document.getElementById('nav-contact').textContent = dict.navContact;
+      setTxt('btn-uz', 'UZ');
+      setTxt('btn-ru', 'RU');
+      setTxt('nav-serv', dict.navServ);
+      setTxt('nav-links', dict.navLinks);
+      setTxt('nav-brands', dict.navBrands);
+      setTxt('nav-contact', dict.navContact);
 
-      document.getElementById('h-pill').textContent = dict.hPill;
-      document.getElementById('h-title').innerHTML = dict.hTitle;
-      document.getElementById('h-desc').textContent = dict.hDesc;
-      document.getElementById('h-btn-main').textContent = dict.hBtnMain;
-      document.getElementById('h-btn-sub').textContent = dict.hBtnSub;
+      setTxt('h-pill', dict.hPill);
+      setTxt('h-title', dict.hTitle, true);
+      setTxt('h-desc', dict.hDesc);
+      setTxt('h-btn-main', dict.hBtnMain);
+      setTxt('h-btn-sub', dict.hBtnSub);
 
-      document.getElementById('s-sec-title').innerHTML = dict.sSecTitle;
-      document.getElementById('s-sec-desc').textContent = dict.sSecDesc;
-      document.getElementById('srv-1-t').textContent = dict.srv1t;
-      document.getElementById('srv-1-d').textContent = dict.srv1d;
-      document.getElementById('srv-2-t').textContent = dict.srv2t;
-      document.getElementById('srv-2-d').textContent = dict.srv2d;
-      document.getElementById('srv-3-t').textContent = dict.srv3t;
-      document.getElementById('srv-3-d').textContent = dict.srv3d;
-      document.getElementById('srv-4-t').textContent = dict.srv4t;
-      document.getElementById('srv-4-d').textContent = dict.srv4d;
+      setTxt('s-sec-title', dict.sSecTitle, true);
+      setTxt('s-sec-desc', dict.sSecDesc);
+      setTxt('srv-1-t', dict.srv1t);
+      setTxt('srv-1-d', dict.srv1d);
+      setTxt('srv-2-t', dict.srv2t);
+      setTxt('srv-2-d', dict.srv2d);
+      setTxt('srv-3-t', dict.srv3t);
+      setTxt('srv-3-d', dict.srv3d);
+      setTxt('srv-4-t', dict.srv4t);
+      setTxt('srv-4-d', dict.srv4d);
 
-      document.getElementById('l-sec-title').innerHTML = dict.lSecTitle;
-      document.getElementById('l-sec-desc').textContent = dict.lSecDesc;
-      document.getElementById('lk-1-t').textContent = dict.lk1t;
-      document.getElementById('lk-1-s').textContent = dict.lk1s;
-      document.getElementById('lk-2-t').textContent = dict.lk2t;
-      document.getElementById('lk-2-s').textContent = dict.lk2s;
-      document.getElementById('lk-3-s').textContent = dict.lk3s;
-      document.getElementById('lk-4-s').textContent = dict.lk4s;
+      setTxt('l-sec-title', dict.lSecTitle, true);
+      setTxt('l-sec-desc', dict.lSecDesc);
+      setTxt('lk-1-t', dict.lk1t);
+      setTxt('lk-1-s', dict.lk1s);
+      setTxt('lk-2-t', dict.lk2t);
+      setTxt('lk-2-s', dict.lk2s);
+      setTxt('lk-3-s', dict.lk3s);
+      setTxt('lk-4-s', dict.lk4s);
 
-      document.getElementById('b-sec-title').innerHTML = dict.bSecTitle;
-      document.getElementById('b-sec-desc').textContent = dict.bSecDesc;
+      setTxt('b-sec-title', dict.bSecTitle, true);
+      setTxt('b-sec-desc', dict.bSecDesc);
 
-      document.getElementById('st-1').textContent = dict.st1;
-      document.getElementById('st-2').textContent = dict.st2;
-      document.getElementById('t-quote').textContent = dict.tQuote;
-      document.getElementById('t-role').textContent = dict.tRole;
+      setTxt('st-1', dict.st1);
+      setTxt('st-2', dict.st2);
+      setTxt('t-quote', dict.tQuote);
 
-      document.getElementById('c-sec-title').innerHTML = dict.cSecTitle;
-      document.getElementById('c-sec-desc').textContent = dict.cSecDesc;
-      document.getElementById('cl-1').textContent = dict.cl1;
-      document.getElementById('cl-3').textContent = dict.cl3;
-      document.getElementById('cv-3').textContent = dict.cv3;
+      setTxt('c-sec-title', dict.cSecTitle, true);
+      setTxt('c-sec-desc', dict.cSecDesc);
+      setTxt('cl-1', dict.cl1);
+      setTxt('cl-3', dict.cl3);
+      setTxt('cv-3', dict.cv3);
 
-      document.getElementById('pb-title').textContent = dict.pbTitle;
-      document.getElementById('pb-desc').textContent = dict.pbDesc;
-      document.getElementById('pb-btn').textContent = dict.pbBtn;
-      document.getElementById('f-desc').textContent = dict.fDesc;
-      document.getElementById('fc-1').textContent = dict.fc1;
-      document.getElementById('fc-2').textContent = dict.fc2;
-      document.getElementById('fc-3').textContent = dict.fc3;
+      setTxt('pb-title', dict.pbTitle);
+      setTxt('pb-desc', dict.pbDesc);
+      setTxt('pb-btn', dict.pbBtn);
+      setTxt('f-desc', dict.fDesc);
+      setTxt('fc-1', dict.fc1);
+      setTxt('fc-2', dict.fc2);
+      setTxt('fc-3', dict.fc3);
 
       localStorage.setItem('profile_lang', lang);
     }
